@@ -22,13 +22,13 @@ public class BrowserSetup extends Utils
     }
     else if(browser.equalsIgnoreCase("FireFox"))
      {
-         //System.setProperty("webdriver.firefox.marionette","src\\test\\resources\\BrowserDriver\\geckodriver.exe");
+         System.setProperty("webdriver.firefox.marionette","src\\test\\resources\\BrowserDriver\\geckodriver(2).exe");
 //ignore the above line, as webdriver executes itself. no need to set the system property for firefox
          driver= new FirefoxDriver();
      }
      else
      {
-         System.out.println("Wrong browser name or empty2" + browser);
+         System.out.println("Wrong browser name or empty: " + browser);
      }
 }
 }

@@ -137,7 +137,7 @@ public class Utils extends BasePage
         try {
             TakesScreenshot ts=((TakesScreenshot)driver);//type casting. TakesScreenshot is an interface, so cannot create its object
             File source=ts.getScreenshotAs(OutputType.FILE);//saves the screen shot in buffer memory
-            FileUtils.copyFile(source,new File(".\\ScreenShot\\" + name+".jpg"));//copies files from buffer to our destination file
+            FileUtils.copyFile(source,new File("src\\test\\resources\\ScreenShot\\" + name+".jpg"));//copies files from buffer to our destination file
             //also name is parameterized, so user can give name to the file as per choice
             System.out.println("Screenshot taken.");
         } catch (IOException e) {
@@ -153,4 +153,14 @@ public class Utils extends BasePage
 //       return c;
 //
 //    }
+    public void printRandomNumber()
+    {
+         int i=1;
+        do {
+              generateRandomNumber(11,40);//generates random number starting from 11 to 40
+              i++;
+         }
+         while (i<=3);//generates 3 numbers
+
+}
 }

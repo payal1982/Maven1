@@ -28,6 +28,7 @@ public class BaseTest extends Utils
     {
         if(ITestResult.FAILURE==result.getStatus())//compares if the result is failed with the itest result
         {
+            System.out.println("Test Failed.");
             takeScreenShot(result.getName());//uses the screenshot method from utils class
         }
         closeBrowser();
